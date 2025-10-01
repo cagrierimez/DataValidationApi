@@ -1,0 +1,6 @@
+@DataValidationTool.API_HostAddress = http://localhost:5286
+
+GET {{DataValidationTool.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

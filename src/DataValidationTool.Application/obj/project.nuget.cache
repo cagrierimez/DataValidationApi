@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "zFosEbp13to=",
+  "success": true,
+  "projectFilePath": "D:\\Masaüstü\\My\\Upwork için hazırlanan GithubRepo\\DataValidationTool\\src\\DataValidationTool.Application\\DataValidationTool.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ismet.erimez\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
