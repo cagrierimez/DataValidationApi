@@ -2,64 +2,70 @@
 
 # 📊 Data Validation & Excel Upload API
 
-Bu proje, kullanıcıların Excel dosyalarını API üzerinden yükleyip doğrulamasını sağlar.
-Geçerli kayıtlar veritabanına kaydedilir, geçersiz olanlar ayrı bir Excel çıktısına alınır.
+This project allows users to upload Excel files via an API and validate their data.
+Valid records are saved to the database, while invalid records are exported to a separate Excel file.
 
 ---
 
-## 🚀 Özellikler
-- ✅ Excel dosyası yükleme (Swagger UI üzerinden test edilebilir)
-- ✅ FluentValidation ile veri doğrulama
-- ✅ Geçerli kayıtları DB’ye kaydetme
-- ✅ Hatalı kayıtları ayrı bir Excel dosyası olarak indirme
-- ✅ Katmanlı mimari (API, Service, DataAccess)
+## 🚀 Features
+
+* ✅ Excel file upload (can be tested via Swagger UI)
+* ✅ Data validation using FluentValidation
+* ✅ Save valid records to the database
+* ✅ Export invalid records to a separate Excel file
+* ✅ Layered architecture (API, Service, DataAccess)
 
 ---
 
-## 🛠 Kullanılan Teknolojiler
-- [.NET 8](https://dotnet.microsoft.com/)
-- [ASP.NET Core Web API](https://learn.microsoft.com/aspnet/core/)
-- [FluentValidation](https://fluentvalidation.net/)
-- [ClosedXML](https://github.com/ClosedXML/ClosedXML) (Excel işlemleri için)
-- Swagger (API dokümantasyonu için)
+## 🛠 Technologies Used
+
+* [.NET 8](https://dotnet.microsoft.com/)
+* [ASP.NET Core Web API](https://learn.microsoft.com/aspnet/core/)
+* [FluentValidation](https://fluentvalidation.net/)
+* [ClosedXML](https://github.com/ClosedXML/ClosedXML) (for Excel operations)
+* Swagger (for API documentation)
 
 ---
 
-## 📚 Proje Mimarisi
+## 📂 Project Structure
+
 ```
 src/
- ├── API                # Controller & Swagger
- ├── Service            # İş mantığı (Business Layer)
- ├── DataAccess         # Repository & DB işlemleri
- └── Core               # Ortak modeller ve altyapı
+ ├── API                # Controllers & Swagger
+ ├── Service            # Business logic layer
+ ├── DataAccess         # Repository & database operations
+ └── Core               # Shared models and infrastructure
 ```
 
 ---
 
-## ⚙️ Kurulum
+## ⚙️ Setup Instructions
 
-1. Repo’yu klonla:  
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/kullaniciadi/DataValidationApi.git
+git clone https://github.com/username/DataValidationApi.git
 cd DataValidationApi
 ```
 
-2. Gerekli bağımlılıkları yükle:  
+2. Restore dependencies:
+
 ```bash
 dotnet restore
 ```
 
-3. Uygulamayı çalıştır:  
+3. Run the application:
+
 ```bash
 dotnet run --project API
 ```
 
-4. Tarayıcıdan Swagger UI’a git:  
-👉 [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html)
+4. Open Swagger UI in your browser:
+   👉 [https://localhost:5001/swagger/index.html](https://localhost:5001/swagger/index.html)
 
 ---
 
-## 📊 Veri Akış Diyagramı
+## 📊 Data Flow Diagram
 
 ```text
  Excel/CSV File
@@ -80,10 +86,11 @@ DB (optional)   InvalidRecords.xlsx
 
 ---
 
-## 🧪 Örnek Kullanım
+## 🧪 Example Usage
 
-- Swagger UI’dan `/api/excel/upload` endpointine Excel dosyası yükle  
-- Yanıt:  
+* Upload an Excel file to `/api/excel/upload` endpoint via Swagger UI.
+* Response example:
+
 ```json
 {
   "validRecords": 120,
@@ -92,5 +99,5 @@ DB (optional)   InvalidRecords.xlsx
 }
 ```
 
- 
+---
  
